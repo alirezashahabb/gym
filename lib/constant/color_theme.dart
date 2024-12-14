@@ -15,8 +15,9 @@ class CustomColors {
   static const kDarkCardColor = Color(0xff414141);
 }
 
-ThemeData lightTheme() {
+ThemeData lightTheme(String fontName) {
   return ThemeData(
+    fontFamily: fontName,
     scaffoldBackgroundColor: CustomColors.kMilkyColor,
     colorScheme: const ColorScheme.light(
       primary: CustomColors.kPrimaryColor,
@@ -28,8 +29,9 @@ ThemeData lightTheme() {
   );
 }
 
-ThemeData darkTheme() {
+ThemeData darkTheme(String fontName) {
   return ThemeData(
+    fontFamily: fontName,
     scaffoldBackgroundColor: CustomColors.kLightBlackColor,
     colorScheme: const ColorScheme.dark(
       primary: CustomColors.kPrimaryColor,
