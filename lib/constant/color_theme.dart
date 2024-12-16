@@ -17,6 +17,23 @@ class CustomColors {
 
 ThemeData lightTheme(String fontName) {
   return ThemeData(
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.w900,
+        color: CustomColors.kBlackColor,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: CustomColors.kBlackColor,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: CustomColors.kLightGreyColor,
+      ),
+    ),
     fontFamily: fontName,
     scaffoldBackgroundColor: CustomColors.kMilkyColor,
     colorScheme: const ColorScheme.light(
@@ -31,6 +48,23 @@ ThemeData lightTheme(String fontName) {
 
 ThemeData darkTheme(String fontName) {
   return ThemeData(
+    textTheme: const TextTheme(
+      bodyLarge: TextStyle(
+        fontSize: 22,
+        fontWeight: FontWeight.w900,
+        color: CustomColors.kWhiteColor,
+      ),
+      bodyMedium: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: CustomColors.kWhiteColor,
+      ),
+      bodySmall: TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+        color: CustomColors.kLightGreyColor,
+      ),
+    ),
     fontFamily: fontName,
     scaffoldBackgroundColor: CustomColors.kLightBlackColor,
     colorScheme: const ColorScheme.dark(

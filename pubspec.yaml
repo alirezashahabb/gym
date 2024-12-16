@@ -39,6 +39,8 @@ dependencies:
   hive_flutter: ^1.1.0
   shared_preferences: ^2.3.3
   easy_localization: ^3.0.7
+  fluentui_system_icons: ^1.1.268
+  
 
 dev_dependencies:
   flutter_test:

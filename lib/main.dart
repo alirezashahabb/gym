@@ -19,7 +19,7 @@ void main() async {
         Locale('fa'),
       ],
       path: 'assets/translations',
-      startLocale: const Locale('en'),
+      startLocale: const Locale('fa'),
       saveLocale: true,
       child: const MyApp(),
     ),
