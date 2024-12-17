@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constant/color_theme.dart';
+import 'package:flutter_application_2/screen/users/users.dart';
 import 'package:flutter_application_2/translations/locale_keys.g.dart';
 
 class RootScreen extends StatefulWidget {
@@ -19,7 +20,11 @@ class _RootScreenState extends State<RootScreen> {
     return Scaffold(
       body: Column(
         children: [
-          const Spacer(),
+          Expanded(
+            child: UsersScreen(
+              isActive: curentIndex == 0,
+            ),
+          ),
           Container(
             width: MediaQuery.of(context).size.width,
             color: themeData.colorScheme.secondary,

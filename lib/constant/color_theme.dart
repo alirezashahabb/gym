@@ -17,6 +17,7 @@ class CustomColors {
 
 ThemeData lightTheme(String fontName) {
   return ThemeData(
+    useMaterial3: false,
     textTheme: const TextTheme(
       bodyLarge: TextStyle(
         fontSize: 22,
@@ -48,6 +49,7 @@ ThemeData lightTheme(String fontName) {
 
 ThemeData darkTheme(String fontName) {
   return ThemeData(
+    useMaterial3: false,
     textTheme: const TextTheme(
       bodyLarge: TextStyle(
         fontSize: 22,
