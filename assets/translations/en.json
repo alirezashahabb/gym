@@ -13,8 +13,8 @@
     "textfield_registerDate": "Enter registration date",
     "textfield_endDate": "Enter subscription end date",
     "day_15": "15 days",
-    "month_1": "Month 1",
-    "month_3": "Month 3",
+    "month_1": " One Month",
+    "month_3": " Three Month",
     "fullname": "Full name",
     "phone": "Phone number",
     "price": "Price",
@@ -23,5 +23,7 @@
     "yse": "Yes",
     "no": "No",
     "conform_delete": "Are you sure you want to delete this user?",
-    "deleted_user": "Deleted user"
+    "deleted_user": "Deleted user",
+    "Save": "Save"
+
 }

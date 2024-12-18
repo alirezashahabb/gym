@@ -17,6 +17,27 @@ class CustomColors {
 
 ThemeData lightTheme(String fontName) {
   return ThemeData(
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: const TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+      ),
+      contentPadding: const EdgeInsets.all(12),
+      filled: true,
+      fillColor: CustomColors.kMilkyColor,
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kLightGreyColor,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kPrimaryColor,
+        ),
+      ),
+    ),
     useMaterial3: false,
     textTheme: const TextTheme(
       bodyLarge: TextStyle(
@@ -49,6 +70,27 @@ ThemeData lightTheme(String fontName) {
 
 ThemeData darkTheme(String fontName) {
   return ThemeData(
+    inputDecorationTheme: InputDecorationTheme(
+      hintStyle: const TextStyle(
+        fontSize: 14,
+        fontWeight: FontWeight.w400,
+      ),
+      contentPadding: const EdgeInsets.all(12),
+      filled: true,
+      fillColor: CustomColors.kLightBlackColor,
+      enabledBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kLightGreyColor,
+        ),
+      ),
+      focusedBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kPrimaryColor,
+        ),
+      ),
+    ),
     useMaterial3: false,
     textTheme: const TextTheme(
       bodyLarge: TextStyle(

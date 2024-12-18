@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_2/constant/color_theme.dart';
 import 'package:flutter_application_2/gen/assets.gen.dart';
 import 'package:flutter_application_2/main.dart';
+import 'package:flutter_application_2/screen/add_edite/add_edite.dart';
 import 'package:flutter_application_2/translations/locale_keys.g.dart';
 
 class UsersScreen extends StatelessWidget {
@@ -17,7 +18,13 @@ class UsersScreen extends StatelessWidget {
       floatingActionButton: isActive
           ? FloatingActionButton(
               backgroundColor: themeData.colorScheme.primary,
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    return const AddEditScreen();
+                  },
+                ));
+              },
               child: const Icon(
                 Icons.add,
                 color: CustomColors.kWhiteColor,

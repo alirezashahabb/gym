@@ -26,5 +26,6 @@ abstract class  LocaleKeys {
   static const no = 'no';
   static const conform_delete = 'conform_delete';
   static const deleted_user = 'deleted_user';
+  static const Save = 'Save';
 
 }

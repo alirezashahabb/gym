@@ -29,8 +29,8 @@ class CodegenLoader extends AssetLoader{
   "textfield_registerDate": "Enter registration date",
   "textfield_endDate": "Enter subscription end date",
   "day_15": "15 days",
-  "month_1": "Month 1",
-  "month_3": "Month 3",
+  "month_1": " One Month",
+  "month_3": " Three Month",
   "fullname": "Full name",
   "phone": "Phone number",
   "price": "Price",
@@ -39,7 +39,8 @@ class CodegenLoader extends AssetLoader{
   "yse": "Yes",
   "no": "No",
   "conform_delete": "Are you sure you want to delete this user?",
-  "deleted_user": "Deleted user"
+  "deleted_user": "Deleted user",
+  "Save": "Save"
 };
 static const Map<String,dynamic> fa = {
   "user_gym_vesam": "کاربران باشگاه وسام",
@@ -49,15 +50,15 @@ static const Map<String,dynamic> fa = {
   "people": "{count}نفر",
   "active_user": "کاربران فعال",
   "expired_user": "کاربران غیر فعال",
-  "vesam_gym": "یاشگاه فرهنگی ورزشی وسام",
+  "vesam_gym": "باشگاه فرهنگی ورزشی وسام",
   "add_user": "افزودن کاربر",
   "textfield_fullName": "نام و نام خانوادگی را وارد نمایید",
   "textfield_phone": "لطفا شماره تماس را وارد نمایید",
   "textfield_registerDate": "تاریخ ثبت نام وارد نمایید",
   "textfield_endDate": "تاریخ  پایان شهریه وارد نمایید",
-  "day_15": "15 روز",
-  "month_1": "ماه1",
-  "month_3": "ماه 3",
+  "day_15": "پانزده روز",
+  "month_1": "یک ماه",
+  "month_3": "سه ماه",
   "fullname": "نام و نام خانوداگی",
   "phone": "شماره تماس",
   "price": "قیمت",
@@ -66,7 +67,8 @@ static const Map<String,dynamic> fa = {
   "yse": "بله",
   "no": "خیر",
   "conform_delete": "آیا از حذف این کاربر اطمینان دارید؟",
-  "deleted_user": "حذف کاربر"
+  "deleted_user": "حذف کاربر",
+  "Save": "ذخیره"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en, "fa": fa};
 }
