@@ -14,6 +14,7 @@ abstract class  LocaleKeys {
   static const textfield_phone = 'textfield_phone';
   static const textfield_registerDate = 'textfield_registerDate';
   static const textfield_endDate = 'textfield_endDate';
+  static const textfield_price = 'textfield_price';
   static const day_15 = 'day_15';
   static const month_1 = 'month_1';
   static const month_3 = 'month_3';

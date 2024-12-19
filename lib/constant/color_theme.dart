@@ -37,6 +37,18 @@ ThemeData lightTheme(String fontName) {
           color: CustomColors.kPrimaryColor,
         ),
       ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kRedColor,
+        ),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kRedColor,
+        ),
+      ),
     ),
     useMaterial3: false,
     textTheme: const TextTheme(
@@ -88,6 +100,18 @@ ThemeData darkTheme(String fontName) {
         borderRadius: BorderRadius.circular(12),
         borderSide: const BorderSide(
           color: CustomColors.kPrimaryColor,
+        ),
+      ),
+      errorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kRedColor,
+        ),
+      ),
+      focusedErrorBorder: OutlineInputBorder(
+        borderRadius: BorderRadius.circular(12),
+        borderSide: const BorderSide(
+          color: CustomColors.kRedColor,
         ),
       ),
     ),
