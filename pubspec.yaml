@@ -41,6 +41,7 @@ dependencies:
   easy_localization: ^3.0.7
   fluentui_system_icons: ^1.1.268
   persian_datetime_picker: ^2.5.0
+  quickalert: ^1.1.0
   
   
 

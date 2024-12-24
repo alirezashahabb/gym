@@ -2,12 +2,19 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:fluentui_system_icons/fluentui_system_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_application_2/constant/app_constant.dart';
 import 'package:flutter_application_2/constant/color_theme.dart';
+import 'package:flutter_application_2/model/user_model.dart';
 import 'package:flutter_application_2/translations/locale_keys.g.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 
 class AddEditScreen extends StatefulWidget {
-  const AddEditScreen({super.key});
+  final User user;
+  const AddEditScreen({
+    super.key,
+    required this.user,
+  });
 
   @override
   State<AddEditScreen> createState() => _AddEditScreenState();
@@ -26,6 +33,20 @@ class _AddEditScreenState extends State<AddEditScreen> {
   TextEditingController priceController = TextEditingController();
   TextEditingController registerDateController = TextEditingController();
   TextEditingController endDateController = TextEditingController();
+  var box = Hive.box<User>(AppConstant.userBox);
+  @override
+  void initState() {
+    if (widget.user.isInBox) {
+      fullNameController.text = widget.user.fullName!;
+      phoneController.text = widget.user.phone!;
+      priceController.text = widget.user.price.toString();
+      registerDateController.text = widget.user.registerData!;
+      endDateController.text = widget.user.endDate!;
+      registerType.value = widget.user.registerType!;
+    }
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
@@ -280,11 +301,21 @@ class _AddEditScreenState extends State<AddEditScreen> {
                   width: MediaQuery.of(context).size.width,
                   height: 44,
                   child: ElevatedButton(
-                      onPressed: () {
+                      onPressed: () async {
                         if (formKey.currentState!.validate()) {
-                          print(1);
-                        } else {
-                          print(2);
+                          widget.user.fullName = fullNameController.text;
+                          widget.user.phone = phoneController.text;
+                          widget.user.price = int.parse(priceController.text);
+                          widget.user.registerData =
+                              registerDateController.text;
+                          widget.user.endDate = endDateController.text;
+                          widget.user.registerType = registerType.value;
+                          if (widget.user.isInBox) {
+                            widget.user.save();
+                          } else {
+                            await box.add(widget.user);
+                          }
+                          Navigator.pop(context);
                         }
                       },
                       child: Text(

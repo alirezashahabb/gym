@@ -1,7 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_application_2/constant/app_constant.dart';
 import 'package:flutter_application_2/constant/color_theme.dart';
+import 'package:flutter_application_2/model/user_model.dart';
 import 'package:flutter_application_2/screen/root/root_screen.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 late SharedPreferences sharedPreferences;
@@ -12,6 +15,9 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   sharedPreferences = await SharedPreferences.getInstance();
   isDarkTheme.value = sharedPreferences.getBool('isDark') ?? false;
+  await Hive.initFlutter();
+  Hive.registerAdapter(UserAdapter());
+  await Hive.openBox<User>(AppConstant.userBox);
 
   runApp(
     EasyLocalization(

@@ -12,6 +12,10 @@ import 'package:flutter/widgets.dart';
 class $AssetsImgGen {
   const $AssetsImgGen();
 
+  /// File path: assets/img/Empty-pana.png
+  AssetGenImage get emptyPana =>
+      const AssetGenImage('assets/img/Empty-pana.png');
+
   /// File path: assets/img/Flag_of_Iran.svg.png
   AssetGenImage get flagOfIranSvg =>
       const AssetGenImage('assets/img/Flag_of_Iran.svg.png');
@@ -20,7 +24,7 @@ class $AssetsImgGen {
   AssetGenImage get usaFalt => const AssetGenImage('assets/img/usa_falt.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [flagOfIranSvg, usaFalt];
+  List<AssetGenImage> get values => [emptyPana, flagOfIranSvg, usaFalt];
 }
 
 class $AssetsTranslationsGen {

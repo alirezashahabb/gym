@@ -2,12 +2,27 @@ import 'package:hive_flutter/hive_flutter.dart';
 
 part 'user_model.g.dart';
 
-@HiveType(typeId: 1)
+@HiveType(typeId: 0)
 class User extends HiveObject {
+  @HiveField(0)
+  String? fullName;
   @HiveField(1)
-  final String name;
+  String? phone;
   @HiveField(2)
-  final int age;
+  int? price;
+  @HiveField(3)
+  String? registerData;
+  @HiveField(4)
+  String? endDate;
+  @HiveField(5)
+  int? registerType;
 
-  User({required this.name, required this.age});
+  User(
+    this.fullName,
+    this.phone,
+    this.price,
+    this.registerData,
+    this.endDate,
+    this.registerType,
+  );
 }
