@@ -15,7 +15,7 @@ class CodegenLoader extends AssetLoader{
   }
 
   static const Map<String,dynamic> en = {
-  "user_gym_vesam": "Vesam Club Users",
+  "user_gym_vesam": "KoshanFidar Club Users",
   "search_by_fullName": "Search by full name",
   "count_of_active_user": "Number of active users",
   "count_of_inactive_user": "Number of inactive users",
@@ -44,7 +44,7 @@ class CodegenLoader extends AssetLoader{
   "Save": "Save"
 };
 static const Map<String,dynamic> fa = {
-  "user_gym_vesam": "کاربران باشگاه وسام",
+  "user_gym_vesam": "کاربران باشگاه کوشان فیدار",
   "search_by_fullName": "جستجو با نام خانوادگی",
   "count_of_active_user": "تعداد  کاربران فعال",
   "count_of_inactive_user": "تعداد  کاربران غیر فعال",
